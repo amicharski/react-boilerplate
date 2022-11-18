@@ -1,1 +1,1 @@
-Please install with only `npm install --legacy-peer-deps`, otherwise the webpack versions will break on you
+If using >6.14.17, lease install with only `npm install --legacy-peer-deps`, otherwise the webpack versions will break on you
