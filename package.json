@@ -1,0 +1,164 @@
+{
+    "name": "react-boilerplate",
+    "description": "A boilerplate for a React app",
+    "version": "1.0.0",
+    "scripts": {},
+    "dependencies": {
+        "@hot-loader/react-dom": "16.10.2",
+        "connected-react-router": "6.5.2",
+        "object-assign": "4.1.1",
+        "react": "16.11.0",
+        "react-dom": "16.11.0",
+        "react-redux": "7.1.1",
+        "react-router-dom": "5.1.2",
+        "redux": "4.0.4",
+        "redux-thunk": "2.3.0"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.19.3",
+        "@babel/core": "7.6.4",
+        "@babel/node": "7.6.3",
+        "@babel/plugin-proposal-class-properties": "7.5.5",
+        "@babel/plugin-transform-react-constant-elements": "7.6.3",
+        "@babel/plugin-transform-runtime": "7.6.2",
+        "@babel/polyfill": "7.6.0",
+        "@babel/preset-env": "7.6.3",
+        "@babel/preset-react": "7.6.3",
+        "acorn": "7.4.1",
+        "ajv": "6.12.6",
+        "autoprefixer": "9.7.0",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-eslint": "10.0.3",
+        "babel-jest": "24.9.0",
+        "babel-loader": "8.0.6",
+        "babel-plugin-transform-react-remove-prop-types": "0.4.24",
+        "browser-sync": "2.27.10",
+        "chalk": "2.4.2",
+        "concurrently": "5.3.0",
+        "connect-history-api-fallback": "1.6.0",
+        "coveralls": "3.0.7",
+        "css-loader": "3.2.0",
+        "cssnano": "5.1.14",
+        "enzyme": "3.10.0",
+        "enzyme-adapter-react-16": "1.15.1",
+        "eslint": "6.6.0",
+        "eslint-plugin-import": "2.18.2",
+        "eslint-plugin-react": "7.16.0",
+        "eslint-watch": "6.0.1",
+        "file-loader": "4.2.0",
+        "hard-source-webpack-plugin": "0.13.1",
+        "history": "4.10.1",
+        "html-webpack-plugin": "5.5.0",
+        "identity-obj-proxy": "3.0.0",
+        "jest": "29.3.1",
+        "jest-cli": "29.3.1",
+        "json-loader": "0.5.7",
+        "mini-css-extract-plugin": "0.8.0",
+        "mockdate": "2.0.5",
+        "node-sass": "8.0.0",
+        "open-cli": "7.1.0",
+        "postcss-loader": "3.0.0",
+        "prompt": "1.0.0",
+        "prop-types": "15.7.2",
+        "raf": "3.4.1",
+        "react-hot-loader": "4.12.15",
+        "react-test-renderer": "16.11.0",
+        "redux-immutable-state-invariant": "2.1.0",
+        "redux-mock-store": "1.5.3",
+        "replace": "1.2.2",
+        "rimraf": "3.0.0",
+        "sass-loader": "10.4.1",
+        "style-loader": "1.0.0",
+        "url-loader": "2.2.0",
+        "webpack": "5.75.0",
+        "webpack-bundle-analyzer": "4.7.0",
+        "webpack-dev-middleware": "3.7.2",
+        "webpack-hot-middleware": "2.25.3"
+      },
+      "keywords": [
+        "react",
+        "reactjs",
+        "boilerplate",
+        "micharski"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/amicharski/react-boilerplate/tree/main"
+      },
+      "jest": {
+        "moduleNameMapper": {
+          "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
+          "\\.(css)$": "<rootDir>/tools/assetsTransformer.js"
+        },
+        "setupFiles": [
+          "raf/polyfill",
+          "./tools/enzymeTestAdapterSetup.js"
+        ]
+      },
+      "babel": {
+        "env": {
+          "development": {
+            "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ],
+            "plugins": [
+              "@babel/plugin-transform-runtime",
+              "@babel/plugin-proposal-class-properties",
+              "react-hot-loader/babel"
+            ]
+          },
+          "production": {
+            "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ],
+            "plugins": [
+              "@babel/plugin-transform-runtime",
+              "@babel/plugin-proposal-class-properties",
+              "@babel/plugin-transform-react-constant-elements",
+              "transform-react-remove-prop-types"
+            ]
+          },
+          "test": {
+            "presets": [
+              "@babel/preset-env",
+              "@babel/preset-react"
+            ],
+            "plugins": [
+              "@babel/plugin-transform-runtime",
+              "@babel/plugin-proposal-class-properties"
+            ]
+          }
+        }
+      },
+      "eslintConfig": {
+        "root": true,
+        "extends": [
+          "eslint:recommended",
+          "plugin:import/errors",
+          "plugin:import/warnings",
+          "plugin:react/recommended"
+        ],
+        "plugins": [
+          "react"
+        ],
+        "parser": "babel-eslint",
+        "parserOptions": {
+          "ecmaVersion": 6,
+          "sourceType": "module",
+          "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+          }
+        },
+        "env": {
+          "es6": true,
+          "browser": true,
+          "node": true,
+          "jquery": true,
+          "jest": true
+        },
+        "globals": {}
+      }
+}
