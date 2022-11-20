@@ -1,1 +1,3 @@
-If using >6.14.17, lease install with only `npm install --legacy-peer-deps`, otherwise the webpack versions will break on you
+### React Boilerplate
+
+## Using NPM 6.14.17 because I care about stability
