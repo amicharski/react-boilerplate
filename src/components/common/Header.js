@@ -1,11 +1,37 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 function Header() {
+    const logoStyle = {
+        fontWeight: 'bolder',
+        paddingRight: '40px',
+        fontSize: 20,
+        textTransform: 'uppercase'
+    };
+
+    const page = useLocation().pathname;
+
+    const menuToggle = () => {
+        document.getElementById('primaryNav').classList.toggle('close');
+    };
+
     return (
-        <nav>
-            <NavLink to="/" exact>Home</NavLink>{" | "}
-            <NavLink to="/about">About</NavLink>
+        <nav className="clearfix">
+            <div className="row limited">
+                <span style={logoStyle}>Micharski</span>
+                <button id="hamburgerBtn" onClick={menuToggle}>&#9776;</button>
+                <ul id="primaryNav">
+                    <li className={`${page === "/" ? 'active' : ''}`}>
+                        <NavLink to="/" exact>Home</NavLink>
+                    </li>
+                    <li className={`${page === "/about" ? 'active' : ''}`}>
+                        <NavLink to="/about">About</NavLink>
+                    </li>
+                    <li className={`${page === "/color" ? 'active' : ''}`}>
+                        <NavLink to="/color">Color</NavLink>
+                    </li>
+                </ul>
+            </div>
         </nav>
     );
 }
