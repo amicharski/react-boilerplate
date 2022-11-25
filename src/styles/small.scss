@@ -32,33 +32,16 @@ h1 {
     text-align: center;
 }
 
-.landing-tiles {
-    display: grid;
-}
-
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px;
-}
-
-.top-tile > p {
-    font-weight: lighter;
-    font-size: 24px;
-}
-
-.tile > h2 {
-    text-align: center;
-    font-size: 24px;
-}
-
-.tile > p {
-    text-align: justify;
-    font-size: 18px;
 }
 
 a {
     color: $text-color;
     text-decoration: none;
 }
+
+/* navbar */
 
 nav {
     background-color: $primary;
@@ -114,6 +97,47 @@ footer {
     margin: auto;
 }
 
+.sparsely-limited {
+    max-width: 1500px;
+    margin: auto;
+}
+
 .column{float: left; padding: 0 2vw; margin: 0 0 .75rem 0;}
 
 .small-12 {width: 100%;}
+
+/* landing page tiles */
+
+.top-tile {
+    text-align: center;
+}
+
+.top-tile > p {
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+/* content tiles */
+
+.landing-tiles {
+    display: grid;
+}
+
+.tile {
+    padding: 2rem;
+}
+
+.tile > h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.tile > p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.tile > img {
+    width: 100%;
+    height: auto;
+}

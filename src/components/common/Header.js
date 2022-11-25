@@ -4,9 +4,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 function Header() {
     const logoStyle = {
         fontWeight: 'bolder',
-        paddingRight: '40px',
         fontSize: 20,
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        padding: '.8rem 0',
+        textAlign: 'center'
     };
 
     const page = useLocation().pathname;
@@ -18,9 +19,13 @@ function Header() {
     return (
         <nav className="clearfix">
             <div className="row limited">
-                <span style={logoStyle}>Micharski</span>
-                <button id="hamburgerBtn" onClick={menuToggle}>&#9776;</button>
                 <ul id="primaryNav">
+                    <li>
+                        <div style={logoStyle}>
+                            Micharski
+                            <button id="hamburgerBtn" onClick={menuToggle}>&#9776;</button>
+                        </div>
+                    </li>
                     <li className={`${page === "/" ? 'active' : ''}`}>
                         <NavLink to="/" exact>Home</NavLink>
                     </li>
