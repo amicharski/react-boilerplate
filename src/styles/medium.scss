@@ -7,4 +7,11 @@
 
     nav ul.close {display: block;}
 
+    .landing-tiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1.2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
 } /* end of media query */
