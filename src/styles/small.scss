@@ -1,12 +1,13 @@
+@use 'sass:map';
+
+@import 'color_palette';
+
 $bg-color: #222;
 $text-color: #AAA;
 $text-dark: #111;
+$text-light: #EEE;
 
-$primary: #D63230;
-
-$red-0: #FCF5F5;
-$red-1000: #FC0A0A;
-$red-2000: #2A0303;
+$primary: map.get($colors, 'red-1400');//#D63230;
 
 @font-face {
     font-family: RussischSans;
@@ -14,7 +15,7 @@ $red-2000: #2A0303;
 }
 
 body {
-    background-image: linear-gradient(90deg, $bg-color, $bg-color, $bg-color, darken($primary, 20%));
+    background-image: linear-gradient(90deg, $bg-color, $bg-color, $bg-color, darken($primary, 10%));
     color: $text-color;
     font-family: RussischSans, Arial, Helvetica, sans-serif;
 }
@@ -45,7 +46,7 @@ a {
 
 nav {
     background-color: $primary;
-    color: $text-dark;
+    color: $text-light;
 }
 
 nav ul {margin: 0; padding: 0;}
@@ -55,7 +56,7 @@ nav ul.close {display: none;}
 nav a {
     display: block;
     padding: .8rem 0;
-    color: $text-dark;
+    color: $text-light;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -79,7 +80,7 @@ footer {
     padding-bottom: 40px;
     height: 20px;
     background-color: $primary;
-    color: $text-dark;
+    color: $text-light;
     font-weight: bold;
 }
 
@@ -128,7 +129,7 @@ footer {
 
 .tile {
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 .tile > h2 {
