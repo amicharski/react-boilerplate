@@ -1,13 +1,18 @@
 @use 'sass:map';
 
-@import 'color_palette';
+@use 'color_palette.module.scss';
 
 $bg-color: #222;
 $text-color: #AAA;
 $text-dark: #111;
 $text-light: #EEE;
 
-$primary: map.get($colors, 'red-1400');//#D63230;
+$primary: map.get(color_palette.$colors, 'red');//#D63230;
+
+:export {
+    primary: #FFAAAA;
+}
+
 
 @font-face {
     font-family: RussischSans;
@@ -138,11 +143,25 @@ footer {
 }
 
 .tile > p {
-    text-align: justify;
+    text-align: left;
     font-size: 18px;
 }
 
 .tile > img {
     width: 100%;
     height: auto;
+}
+
+/* Color Boxes */
+
+.color-box {
+    padding: 4rem;
+    text-align: center;
+}
+
+.color-box-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1.2fr);
+    column-gap: 20px;
+    row-gap: 20px;
 }

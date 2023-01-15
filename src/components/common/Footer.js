@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="clearfix">
             <div className="limited">
-                &#169; 2022 All Rights Reserved
+                &#169; 2023 All Rights Reserved
             </div>
         </footer>
     );

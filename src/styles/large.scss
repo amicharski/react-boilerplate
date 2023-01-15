@@ -7,4 +7,18 @@
         column-gap: 20px;
         row-gap: 20px;
     }
+
+    /* Color Boxes */
+
+    .color-box {
+        padding: 4rem;
+        text-align: center;
+    }
+
+    .color-box-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1.2fr);
+        column-gap: 20px;
+        row-gap: 20px;
+    }
 } /* end of media query */

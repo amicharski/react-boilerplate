@@ -22,12 +22,12 @@ function Header() {
                 <ul id="primaryNav">
                     <li>
                         <div style={logoStyle}>
-                            Micharski
+                            MIGN
                             <button id="hamburgerBtn" onClick={menuToggle}>&#9776;</button>
                         </div>
                     </li>
                     <li className={`${page === "/" ? 'active' : ''}`}>
-                        <NavLink to="/" exact>Home</NavLink>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li className={`${page === "/about" ? 'active' : ''}`}>
                         <NavLink to="/about">About</NavLink>
